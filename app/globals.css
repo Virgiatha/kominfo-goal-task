@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --goal-bg: #f4f6f8;
+  --goal-card: #ffffff;
+  --goal-border: #d8dee5;
+  --goal-text: #1f2937;
+  --goal-muted: #5b6775;
+  --goal-accent: #1e5a82;
+  --goal-accent-soft: #e8f1f7;
+  --goal-accent-strong: #123b5d;
+  --goal-warning: #a96800;
+  --goal-ring: rgba(30, 90, 130, 0.16);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--goal-bg);
+  color: var(--goal-text);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+main {
+  width: 100%;
+}
+
+.goal-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.75rem 1rem 3rem;
+}
+
+.dashboard-frame {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .dashboard-frame {
+    grid-template-columns: 1fr;
+  }
+}
+
+.goal-card {
+  background: var(--goal-card);
+  border: 1px solid var(--goal-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.goal-progress-bar {
+  position: relative;
+  height: 0.7rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background: #e2e8f0;
+}
+
+.goal-progress-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: var(--goal-accent);
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.status-chip.complete {
+  background: var(--goal-accent-soft);
+  color: var(--goal-accent-strong);
+}
+
+.status-chip.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+@media (max-width: 640px) {
+  .goal-shell {
+    padding: 1.25rem 0.75rem 2.5rem;
+  }
 }
