@@ -13,14 +13,14 @@ export default function Button({
   const isDisabled = disabled || loading;
 
   const baseStyle =
-    "inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/20";
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#167A52]/20";
 
   const variantStyle =
     variant === "secondary"
-      ? "border border-slate-300 bg-white text-slate-700 shadow-none hover:bg-slate-50"
+      ? "border border-slate-300 bg-slate-100 text-slate-700 shadow-none hover:bg-slate-200"
       : variant === "danger"
         ? "bg-red-700 text-white hover:bg-red-800"
-      : "bg-[#1E5A82] text-white hover:bg-[#123B5D]";
+        : "bg-[#167A52] text-white hover:bg-[#0B5D3B]";
 
   const disabledStyle = isDisabled
     ? "cursor-not-allowed opacity-65"

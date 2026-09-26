@@ -50,21 +50,20 @@ Progress = 3 / 5 × 100
 
 Gunakan pendekatan:
 
-> **Modern Government Dashboard**
+> **Modern Government Portal — Diskominfo Kalsel Inspired**
 
 Desain harus memberikan kesan:
 
-- Formal
-- Profesional
-- Institusional
-- Modern
-- Bersih
-- Sederhana
-- Informatif
-- Mudah digunakan
+- Formal seperti portal pemerintahan
+- Profesional dan institusional
+- Modern tetapi tetap familiar sebagai website pemerintah daerah
+- Bersih dengan section-based layout
+- Informatif dan mudah dipindai
+- Menggunakan hierarchy visual yang jelas
+- Memiliki karakter visual portal Diskominfo Kalsel
 - Tidak terlalu dekoratif
 
-Karena aplikasi digunakan dalam konteks **Pemerintah Provinsi Kalimantan Selatan**, desain jangan terlihat seperti:
+Karena aplikasi digunakan dalam konteks **Pemerintah Provinsi Kalimantan Selatan**, gunakan karakter visual portal pemerintahan daerah yang terinspirasi dari website **Diskominfo Provinsi Kalimantan Selatan**. Desain tetap merupakan aplikasi internal Goals/Task, bukan website publik. Jangan membuatnya terlihat seperti:
 
 - Marketplace
 - Social media
@@ -137,17 +136,17 @@ Untuk dashboard desktop:
 
 ---
 
-# 5. Color Palette
+# 5. Color Palette — Diskominfo Kalsel Inspired
 
-Gunakan warna yang formal dan tidak terlalu mencolok.
+Gunakan palet yang mengambil nuansa visual website pemerintahan/Diskominfo Kalsel: hijau sebagai identitas utama, putih sebagai surface, serta warna netral untuk menjaga keterbacaan. Jangan menyalin warna/asset website reference secara mentah.
 
 ## Primary
 
 ```text
-Primary Dark : #123B5D
-Primary      : #1E5A82
-Accent       : #0F8B8D
-Gold         : #D4A72C
+Primary Dark : #0B5D3B
+Primary      : #167A52
+Accent       : #D4A72C
+Green Soft   : #EAF5EF
 ```
 
 ## Neutral
@@ -200,6 +199,49 @@ Jangan menggunakan seluruh warna sekaligus pada setiap halaman.
 
 ---
 
+# 5.1. Visual Reference Theme
+
+Gunakan website resmi **Diskominfo Provinsi Kalimantan Selatan** hanya sebagai referensi tema visual:
+
+```text
+https://diskominfo.kalselprov.go.id/
+```
+
+Yang boleh ditiru sebagai **arah visual**, bukan disalin:
+- Nuansa portal pemerintahan daerah
+- Dominasi warna hijau dan white space
+- Header/navigation yang formal
+- Section dan card yang clean
+- Gaya typography yang mudah dibaca
+- Hierarki informasi seperti portal pemerintahan
+- Penggunaan aksen gold secara terbatas
+- Visual yang informatif dan institutional
+
+Jangan mengubah:
+- Struktur fitur
+- Business logic
+- API
+- Database
+- Route
+- Terminology Goal/Task
+- Behavior progress
+- Authentication
+- Existing component/functionality
+
+Jangan menyalin:
+- Logo Diskominfo
+- Foto/banner website reference
+- Konten berita
+- Teks website reference
+- Asset website reference
+- Identitas Diskominfo sebagai nama aplikasi
+
+Tetap gunakan identitas aplikasi yang sudah ditentukan dan logo:
+
+```text
+/public/logo kalsel.svg
+```
+
 # 6. Typography
 
 Gunakan font yang sederhana dan profesional.
@@ -237,7 +279,7 @@ Hindari font dekoratif.
 
 # 7. Layout
 
-Gunakan layout dashboard dengan sidebar untuk desktop.
+Pertahankan layout dashboard dengan sidebar untuk desktop, tetapi ubah **visual theme** agar mengambil nuansa portal pemerintahan Diskominfo Kalsel: header hijau, active navigation hijau, section putih, dan aksen gold yang sangat terbatas.
 
 Struktur:
 
@@ -271,7 +313,7 @@ Jangan menggunakan emoji sebagai icon utama.
 
 # 8. Header
 
-Header harus sederhana dan formal.
+Header harus sederhana dan formal, dengan visual yang terasa seperti portal resmi pemerintah daerah dan menggunakan nuansa hijau khas pemerintahan Kalsel.
 
 Isi:
 
@@ -305,7 +347,7 @@ Role hanya ditampilkan jika tersedia dari backend.
 
 # 9. Sidebar
 
-Sidebar harus terlihat sederhana dan profesional.
+Sidebar harus terlihat sederhana dan profesional dengan nuansa portal pemerintahan. Gunakan primary green untuk active state dan white/light-green untuk surface.
 
 Menu:
 
@@ -1683,14 +1725,14 @@ Gagal memuat Goals.
 
 ---
 
-# 56. Final Visual Direction
+# 56. Final Visual Direction — Diskominfo Kalsel Inspired
 
-Visual akhir harus terasa seperti aplikasi internal pemerintahan modern:
+Visual akhir harus terasa seperti **aplikasi internal Pemerintah Provinsi Kalimantan Selatan dengan tema visual yang terinspirasi dari portal Diskominfo Kalsel**:
 
 ```text
-Government
+Government Portal Style
         +
-Modern Dashboard
+Diskominfo Kalsel Inspired Visual
         +
 Simple Enterprise Application
 ```
@@ -1909,4 +1951,4 @@ Hasil akhir aplikasi harus terlihat seperti aplikasi internal pemerintahan moder
 
 **Prinsip utama:**
 
-> Formal seperti aplikasi pemerintahan, modern seperti dashboard enterprise, tetapi tetap sederhana dan mudah digunakan.
+> Formal seperti portal pemerintahan daerah, memiliki nuansa visual Diskominfo Kalsel, modern seperti aplikasi enterprise, tetapi tetap sederhana dan mudah digunakan.

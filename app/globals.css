@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --goal-bg: #f4f6f8;
+  --goal-primary-dark: #0b5d3b;
+  --goal-primary: #167a52;
+  --goal-accent: #d4a72c;
+  --goal-green-soft: #eaf5ef;
+  --goal-bg: #f5f7fa;
   --goal-card: #ffffff;
-  --goal-border: #d8dee5;
+  --goal-border: #e2e8f0;
   --goal-text: #1f2937;
-  --goal-muted: #5b6775;
-  --goal-accent: #1e5a82;
-  --goal-accent-soft: #e8f1f7;
-  --goal-accent-strong: #123b5d;
-  --goal-warning: #a96800;
-  --goal-ring: rgba(30, 90, 130, 0.16);
+  --goal-muted: #64748b;
+  --goal-ring: rgba(22, 122, 82, 0.16);
 }
 
 html {
@@ -21,7 +21,7 @@ body {
   margin: 0;
   background: var(--goal-bg);
   color: var(--goal-text);
-  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 * {
@@ -30,7 +30,8 @@ body {
 
 button,
 input,
-textarea {
+textarea,
+select {
   font: inherit;
 }
 
@@ -64,16 +65,16 @@ main {
 .goal-card {
   background: var(--goal-card);
   border: 1px solid var(--goal-border);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
 .goal-progress-bar {
   position: relative;
-  height: 0.7rem;
+  height: 0.55rem;
   width: 100%;
   overflow: hidden;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   background: #e2e8f0;
 }
 
@@ -81,14 +82,14 @@ main {
   position: absolute;
   inset: 0 auto 0 0;
   border-radius: inherit;
-  background: var(--goal-accent);
+  background: var(--goal-primary);
 }
 
 .status-chip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
   padding: 0.3rem 0.65rem;
   font-size: 0.72rem;
   font-weight: 700;
@@ -96,13 +97,27 @@ main {
 }
 
 .status-chip.complete {
-  background: var(--goal-accent-soft);
-  color: var(--goal-accent-strong);
+  background: var(--goal-green-soft);
+  color: var(--goal-primary-dark);
 }
 
 .status-chip.pending {
-  background: #fef3c7;
-  color: #92400e;
+  background: #fef9e8;
+  color: #8a6a12;
+}
+
+.nav-link-active {
+  background: var(--goal-primary);
+  color: #ffffff;
+}
+
+.nav-link {
+  color: var(--goal-text);
+}
+
+.nav-link:hover {
+  background: var(--goal-green-soft);
+  color: var(--goal-primary-dark);
 }
 
 @media (max-width: 640px) {

@@ -4,16 +4,17 @@ import Footer from "../components/footer";
 
 export const metadata = {
   title: {
-    default: "Sistem Kinerja",
-    template: "%s | Sistem Kinerja",
+    default: "Aplikasi Pencatat Goals",
+    template: "%s | Aplikasi Pencatat Goals",
   },
-  description: "Sistem pemantauan Sasaran Kerja dan Rencana Kerja Pemerintah Provinsi Kalimantan Selatan.",
+  description:
+    "Aplikasi pencatat Goals dan Task Pemerintah Provinsi Kalimantan Selatan",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className="min-h-screen bg-[#f4f6f8] text-slate-800 antialiased">
+      <body className="min-h-screen bg-[#F5F7FA] text-[#1F2937] antialiased">
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="flex-1">{children}</main>
